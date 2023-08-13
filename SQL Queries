@@ -1,0 +1,59 @@
+CREATE TABLE Users (
+    User_ID NUMBER PRIMARY KEY,
+    Username VARCHAR2(50),
+    Mobile_No VARCHAR2(15),
+    Gender VARCHAR2(10),
+    Email VARCHAR2(100),
+    Location VARCHAR2(100)
+);
+
+CREATE TABLE Bookings (
+    Booking_ID NUMBER PRIMARY KEY,
+    Username VARCHAR2(50) REFERENCES Users(Username),
+    No_Of_Tickets NUMBER,
+    Seat_No VARCHAR2(20),
+    Show_Time VARCHAR2(10),
+    Venue VARCHAR2(100),
+    Booking_Date DATE
+);
+
+CREATE TABLE Movies (
+    Movie_ID NUMBER PRIMARY KEY,
+    Movie_Name VARCHAR2(100),
+    Genre VARCHAR2(50),
+    Run_Time VARCHAR2(10),
+    Booking_ID NUMBER REFERENCES Bookings(Booking_ID)
+);
+
+
+ALTER TABLE Users ADD Birthdate DATE;
+ALTER TABLE Movies RENAME TO Films WHERE Genre = 'Action';
+ALTER TABLE Bookings DROP COLUMN Seat_No WHERE Venue = 'City Theater';
+ALTER TABLE Bookings DROP COLUMN Show_Time;
+
+DESC USERS;
+DESC Bookings;
+DESC Movies;
+
+INSERT INTO Users VALUES(1, 'user123', '123-456-7890', 'Male', 'user123@example.com', 'New York'),
+INSERT INTO Users VALUES(2, 'moviebuff', '987-654-3210', 'Female', 'buff@example.com', 'Los Angeles'),
+INSERT INTO Users VALUES(3, 'musiclover', '555-555-5555', 'Male', 'music@example.com', 'London'),
+INSERT INTO Users VALUES(4, 'bookworm', '888-888-8888', 'Female', 'book@example.com', 'San Francisco'),
+INSERT INTO Users VALUES(5, 'adventurer', '777-777-7777', 'Non-Binary', 'adventure@example.com', 'Sydney');
+
+SELECT * FROM Users;
+
+INSERT INTO Bookings VALUES(101, 'user123', 2, 'A5, A6', '18:00', 'City Theater', TO_DATE('2023-08-20', 'YYYY-MM-DD')),
+INSERT INTO Bookings VALUES(102, 'moviebuff', 3, 'Section B', '20:30', 'Arena Stadium', TO_DATE('2023-09-10', 'YYYY-MM-DD')),
+INSERT INTO Bookings VALUES(103, 'musiclover', 1, 'Table 8', '19:30', 'Laugh House', TO_DATE('2023-08-25', 'YYYY-MM-DD')),
+INSERT INTO Bookings VALUES(104, 'bookworm', 2, 'B7, B8', '14:00', 'City Theater', TO_DATE('2023-08-27', 'YYYY-MM-DD')),
+INSERT INTO Bookings VALUES(105, 'adventurer', 4, 'Row C', '16:15', 'Outdoor Park', TO_DATE('2023-09-05', 'YYYY-MM-DD'));
+
+SELECT * FROM Bookings;
+
+DELETE FROM Users WHERE User_ID NOT IN (SELECT DISTINCT User_ID FROM Bookings);
+SELECT * FROM Bookings WHERE Venue = 'City Theater';
+SELECT * FROM Users WHERE Location = 'New York';
+
+
+
