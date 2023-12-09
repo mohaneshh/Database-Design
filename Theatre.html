@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+
+        .theatre-container {
+            
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            margin: 0 -20px; 
+        }
+
+        .theatre-card {
+            
+            background-color: #fff;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 40px); 
+            height: 800px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px; 
+        }
+
+        .theatre-card img {
+            width: 100%;
+            height: 50%; 
+        }
+
+        .theatre-info {
+            
+            padding: 20px;
+        }
+
+        .theatre-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .theatre-button {
+            
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: auto; 
+        }
+
+        .theatre-button:hover {
+            background-color: #0056b3;
+        }
+
+        .theatre-movie-tab {
+            
+            background-color: #db08cd;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px; 
+            display: inline-block; 
+        }
+
+        .add-theatre-tab:hover {
+            background-color: #b30080;
+        }
+
+        
+        .transaction-button {
+            background-color: #3498db; 
+            color: #00a6ff; 
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px; 
+            display: inline-block; 
+        }
+
+        .transaction-button:hover {
+            background-color: #2980b9; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Theatre Information</h1>
+    <div class="theatre-container">
+        <div class="theatre-card">
+            <img src="pvr.jpg" alt="Theatre Poster">
+            <div class="theatre-info">
+                <h2>PVR Cinemas</h2>
+                <p>Theatre_ID: Theatre_1</p>
+                <p>Contact: xxxxxxxxxx</p>
+                <p>Capacity: 500</p>
+                <p>Venue: Chennai</p>
+                <br>
+                <br>
+                <a href="Theatre_Experience4.html"><button class="theatre-button">Theatre Experience</button></a>
+            </div>
+        </div>
+        <div class="theatre-card">
+            <img src="maxresdefault.jpg" alt="Theatre Poster">
+            <div class="theatre-info">
+                <h2>INOX</h2>
+                <p>Theatre_ID: Theatre_2</p>
+                <p>Contact: xxxxxxxxxx</p>
+                <p>Capacity: 300</p>
+                <p>Venue: Coimbatore</p>
+                <br>
+                <br>
+                <a href="Theatre_Experience2.html"><button class="theatre-button">Theatre Experience</button></a>
+            </div>
+        </div>
+        <div class="theatre-card">
+            <img src="images.jpeg" alt=" Theatre Poster">
+            <div class="theatre-info">
+                <h2>Cinepolis</h2>
+                <p>Theatre_ID: Theatre_3</p>
+                <p>Contact: xxxxxxxxxx</p>
+                <p>Capacity: 200</p>
+                <p>Venue: Bangalore</p>
+                <br>
+                <br>
+                <a href="Theatre_Experience3.html"><button class="theatre-button">Theatre Experience</button></a>
+            </div>
+        </div>
+        <div class="theatre-card">
+            <img src="images (1).jpeg" alt="Theatre Poster">
+            <div class="theatre-info">
+                <h2>Alamo Drafthouse</h2>
+                <p>Theatre_ID: Theatre_4</p>
+                <p>Contact: xxxxxxxxxx</p>
+                <p>Capacity: 100</p>
+                <p>Venue: New Delhi</p>
+                <br>
+                <br>
+                <a href="Theatre_Experience5.html"><button class="theatre-button">Theatre Experience</button></a>
+            </div>
+        </div>
+        <div class="theatre-card">
+            <img src="Fun-Cinemas-Ranchi-04.jpg" alt="Theatre Poster">
+            <div class="theatre-info">
+                <h2>Fun Cinemas</h2>
+                <p>Theatre_ID: Theatre_5</p>
+                <p>Contact: xxxxxxxxxx</p>
+                <p>Capacity: 400</p>
+                <p>Venue: Kolkata</p>
+                <br>
+                <br>
+                <a href="Theatre_Experience.html"><button class="theatre-button">Theatre Experience</button></a>
+
+            </div>
+        </div>
+    </div>
+    <a href="dbd.html" class="add-movie-tab"><button class="theatre-button">Go Back</button></a>
+</body>
+</html>

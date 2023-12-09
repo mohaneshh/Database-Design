@@ -1,0 +1,83 @@
+/* styles.css */
+*{
+    font-family: 'Times New Roman';
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-image: url("red-white-grunge-background_1409-1593.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Make form elements smaller and fully fit inside the container padding */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    width: calc(100% - 20px); /* Adjusted width to fit inside the padding */
+    padding: 8px; /* Smaller padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    color: black;
+}
+
+/* Adjusted focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Smaller button */
+button {
+    width: 100%;
+    padding: 8px; /* Smaller padding */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+

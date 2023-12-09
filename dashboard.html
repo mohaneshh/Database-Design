@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Store</title>
+    <link rel="stylesheet" href="user.css">
+    <style>
+        body {
+    background-image: url(backgroundmiddle.jpg); /* Replace 'background.jpg' with your image file's path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+    /* Add other background properties as needed */
+        }
+        
+        .content {
+            background-color: red;
+    background-image: url('backgroundmiddle.jpg'); /* Replace 'your-background-image.jpg' with the actual path to your background image */
+    background-size: cover; /* Adjust this property as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+        .featured-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        .featured-heading {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .featured-product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 10px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #007BFF;
+        }
+
+            
+        .featured-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        .featured-heading {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .featured-product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 10px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #007BFF;
+        }
+
+        .buy-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }/* Styles for the horizontal navigation bar */
+        .navbar {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            background-color: red;
+            margin: 0;
+        }   
+
+        .navbar li {
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }/* Styles for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo-on-gray.jpg" alt="BookMyShow Logo" width="200" height="100">
+            
+        </div>
+        <nav>
+           <!-- Inside the <nav> element -->
+            <ul class="navbar">
+                <li><a href="ma_books.html">Books</a></li>
+                <li><a href="ma_products.html">Products</a></li>
+                <li><a href="ma_movies.html">Movies</a></li>
+                <li><a href="ma_restaurants.html">Restaurants</a></li>
+                <li><a href="ma_courses.html">Courses</a></li>
+                <li><a href="ma_miscellaneous.html">Miscellaneous</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="featured-section">
+            <h2 class="featured-heading">Featured Products</h2>
+            <div class="featured-products">
+                <!-- Featured Product 1 -->
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="bestsellers_books.webp" alt="Product 1">
+                    </div>
+                    <div class="product-title">Featured Books</div>
+                    <div class="product-price">₹1979.99</div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <!-- Featured Product 2 -->
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="bestselling-products.webp" alt="Product 2">
+                    </div>
+                    <div class="product-title">Bestselling Products</div>
+                    <div class="product-price">₹245.99</div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <!-- Featured Product 3 -->
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="movie.webp" alt="Product 3">
+                    </div>
+                    <div class="product-title">Top-Rated Movie</div>
+                    <div class="product-price">₹290.99</div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="course.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-title">Popular Course</div>
+                    <div class="product-price">₹1900.99</div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <!-- Add more featured products here -->
+            </div>
+        </div>
+
+        <!-- Add more sections for different product categories, recommendations, etc. -->
+    </main>
+
+    <footer>
+        
+        <p>&copy; 2023 My Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

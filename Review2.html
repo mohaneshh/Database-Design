@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Review Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .product-info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            flex: 0 0 200px;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex: 1;
+            text-align: left;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        .rating-scale {
+            display: flex;
+            align-items: center;
+        }
+
+        .rating-label {
+            margin-right: 10px;
+        }
+
+        .rating-buttons {
+            display: flex;
+        }
+
+        .rating-button {
+            background-color: #ff6a00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .rating-button:hover {
+            background-color: #000000;
+        }
+
+        /* Button styling */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button-container button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button-container button:hover {
+            background-color: #0061ca;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Review</h1>
+    <form action="/submit-feedback" method="POST" enctype="multipart/form-data">
+        <div class="product-info-container">
+            <div class="product-image">
+                <img src="wp6568611.jpg" alt="Product Image" width="200">
+            </div>
+            <div class="movie-details">
+                <h2>Vikram Vedha - Genre: Action,Thriller - RunTime: 2hrs47min - Movie Language - Tamil</h2>
+                <p>Watched on October 7, 2023</p>
+            </div>
+        </div>
+        <br>
+        <div class="rating-scale">
+            <span class="rating-label">Rating:</span>
+            <div class="rating-buttons">
+                <button type="button" class="rating-button" value="1">1</button>
+                <button type="button" class="rating-button" value="2">2</button>
+                <button type="button" class="rating-button" value="3">3</button>
+                <button type="button" class="rating-button" value="4">4</button>
+                <button type="button" class="rating-button" value="5">5</button>
+            </div>
+        </div>
+        <br>
+        <label for="review">Write a Review:</label>
+        <textarea id="review" name="review" rows="4" cols="50" placeholder="How is the movie? What do you like?"></textarea>
+        <br><br>
+        <label for="reviewdate">Date of Review:</label>
+            <input type="date" id="reviewdate" name="reviewdate" required>
+            <br>
+            <br>
+            <div class="helpful-votes">
+                <label for="helpfulvotes">Helpful Votes:</label>
+                <input type="number" id="helpfulvotes" name="helpfulvotes" min="0">
+            </div>
+            <br>
+        <div class="button-container">
+            <a href="dbd.html"><button type="button">Skip</button></a>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

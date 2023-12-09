@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .profile-form {
+            margin-bottom: 20px;
+        }
+
+        .profile-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-form input[type="text"],
+        .profile-form input[type="email"],
+        .profile-form input[type="date"],
+        .profile-form textarea,
+        .profile-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .profile-form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .profile-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            float: right;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+
+        <form method="POST" action="process_profile.php" class="profile-form">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="movie_name">Movie Name:</label>
+            <input type="text" name "movie_name" id="movie_name" required>
+
+            <label for="favourite_actor">Favourite Actor:</label>
+            <input type="text" name="favourite_actor" id="favourite_actor" required>
+
+            <label for="opinions">Opinions:</label>
+            <textarea name="opinions" id="opinions" required></textarea>
+
+            <label for="review_id">Review ID:</label>
+            <input type="number" name="review_id" id="review_id" required>
+
+            <br>
+            <br>
+            <br>
+            <button type="submit">Save Profile</button>
+            <a href="user_registration.html"><button class="logout-button" type="button">Logout</button></a>
+        </form>
+    </div>
+</body>
+</html>

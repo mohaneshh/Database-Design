@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Actor Info Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Movie Actor Info Form</h1>
+        <form>
+            <label for="actorid">Actor_ID:</label>
+            <input type="text" id="actorid" name="actorid" required>
+
+            <label for="actorname">Actor_Name:</label>
+            <input type="text" id="actorname" name="actorname" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">DOB (Date of Birth):</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary" step="0.01" min="0" required>
+
+            <label for="moviecount">Movie Count:</label>
+            <input type="number" id="moviecount" name="moviecount" min="0" required>
+
+            <button type="submit">Submit Actor Info</button>
+        </form>
+    </div>
+</body>
+</html>
